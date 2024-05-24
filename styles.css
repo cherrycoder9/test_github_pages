@@ -1,1 +1,94 @@
-/*  */
+/* CSS 속성 초기화 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+/* 전체 레이아웃 */
+#wrapper {
+    display: flex;
+    width: 700px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 각 요소 간격 설정 */
+#wrapper>*,
+#wrapper>*>* {
+    margin: 3px 6px;
+    padding: 3px 6px;
+    font-size: 18px;
+}
+
+/* 래퍼 하위요소 너비설정 */
+#screenSetting,
+#seatingChart,
+#helpDialog,
+#paymentDialog {
+    width: 50%;
+    border: 1px solid rgb(54, 54, 54);
+}
+
+/* 상영관 세팅 구역 CSS 설정 */
+#screenSetting {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+#screenSetting>select {
+    width: 100%;
+    text-align: center;
+}
+
+/* 도움/진행 관련 안내창 설정 */
+#helpDialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    height: 40px;
+}
+
+/* 좌석도 표시방법 */
+#seatingChart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 각 좌석 표시방법 */
+#seatingChart>div {
+    width: 15%;
+    height: 50px;
+    margin: 7px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+    border: 1px solid rgb(54, 54, 54);
+}
+
+
+/* 결제/취소 관련 안내창 설정 */
+#paymentDialog {
+    display: flex;
+    justify-content: space-between;
+}
+
+#paymentDialog>div {
+    width: 70%;
+    word-wrap: break-word;
+    cursor: default;
+}
+
+#paymentDialog>button {
+    width: 30%;
+    cursor: pointer;
+    background-color: #F7E5B6;
+    border-radius: 7px;
+}

@@ -10,8 +10,67 @@
     <script src='scripts.js' defer></script>
 </head>
 
+<!--
+    영화관 좌석 예매 웹 시스템 구현
+    [ 요구사항 ]
+    1. 인천CGV 에 3개 관이 존재. 예) 인천CGV 1관,2관,3관 
+      - 2차원 배열 금지, 1차원 배열만 사용하고 다수 배열 선언은 가능.
+    2. 관 마다 좌석의 개수는 총 20개. 
+    3. 영화 예매시 먼저 관을 선택후 해당 관의 좌석을 선택
+        결제버튼 클릭시 '예매성공' 과 예매 비밀번호(난수4자리) 발급 후
+        좌석개수에 따라 금액 안내
+      - 만일 이미 예매된 좌석이면 '예매실패' 또는 '불가능' 이라고 안내. 
+        * 예매석 과 빈좌석은 CSS로 구분.
+      - 좌석현황은 관을 선택후 선택된 관의 좌석만 출력. 
+      - 단일(한번에 한개) 좌석, 복수(한번에 여러개) 좌석 예매 가능.
+    5. 영화 가격 : 22:00~09:00 는 조조할인 가격 5,000원, 그외 10,000원
+    6. 예매 취소시 먼저 관을 선택하고 취소좌석을 선택하면 
+        비밀번호를 입력받아 예매시 발급된 비밀번호와 일치할경우 예매 취소.
+-->
+
 <body>
-    <h2>hello</h2>
+    <!-- 전체 감싸서 세로 플렉스 처리 -->
+    <div id="wrapper">
+        <!-- 상영관 세팅 -->
+        <div id="screenSetting">
+            <select name="" id="screenChoice">
+                <option value="">상영관 선택</option>
+                <option value="">인천CGV 1관</option>
+                <option value="">인천CGV 2관</option>
+                <option value="">인천CGV 3관</option>
+            </select>
+        </div>
+        <!-- 도움/진행 관련 안내창 -->
+        <div id="helpDialog">도움/진행 관련 안내창</div>
+        <!-- 선택한 상영관의 좌석도 출력 공간 -->
+        <div id="seatingChart">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+            <div>18</div>
+            <div>19</div>
+            <div>20</div>
+        </div>
+        <!-- 결제 및 취소 관련 화면 -->
+        <div id="paymentDialog">
+            <div>선택좌석 asdfasd fasdfsadfsad fsadfsd</div>
+            <button>결제하기</button>
+        </div>
+    </div>
 </body>
 
 </html>
