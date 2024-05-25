@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>영화관 좌석 예매 페이지</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <script src='scripts.js' defer></script>
@@ -33,11 +33,11 @@
     <div id="wrapper">
         <!-- 상영관 세팅 -->
         <div id="screenSetting">
-            <select name="" id="screenChoice">
-                <option value="">상영관 선택</option>
-                <option value="">인천CGV 1관</option>
-                <option value="">인천CGV 2관</option>
-                <option value="">인천CGV 3관</option>
+            <select id="screenChoice" onchange="screenChange()">
+                <!-- <option value="0">상영관 선택</option>
+                <option value="1">인천CGV 1관 (잔여좌석수: 20)</option>
+                <option value="2">인천CGV 2관 (잔여좌석수: 20)</option>
+                <option value="3">인천CGV 3관 (잔여좌석수: 20)</option> -->
             </select>
         </div>
         <!-- 도움/진행 관련 안내창 -->
@@ -66,7 +66,7 @@
             <div>20</div>
         </div>
         <!-- 결제 및 취소 관련 화면 -->
-        <div id="paymentDialog">
+        <div id="orderDialog">
             <div>선택좌석 asdfasd fasdfsadfsad fsadfsd</div>
             <button>결제하기</button>
         </div>

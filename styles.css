@@ -29,7 +29,7 @@
 #screenSetting,
 #seatingChart,
 #helpDialog,
-#paymentDialog {
+#orderDialog {
     width: 50%;
     border: 1px solid rgb(54, 54, 54);
 }
@@ -75,18 +75,18 @@
 
 
 /* 결제/취소 관련 안내창 설정 */
-#paymentDialog {
+#orderDialog {
     display: flex;
     justify-content: space-between;
 }
 
-#paymentDialog>div {
+#orderDialog>div {
     width: 70%;
     word-wrap: break-word;
     cursor: default;
 }
 
-#paymentDialog>button {
+#orderDialog>button {
     width: 30%;
     cursor: pointer;
     background-color: #F7E5B6;
