@@ -30,8 +30,12 @@
 #seatingChart,
 #helpDialog,
 #orderDialog {
-    width: 50%;
-    border: 1px solid rgb(54, 54, 54);
+    width: 70%;
+}
+
+#seatingChart,
+#orderDialog {
+    border-top: 1px solid rgb(54, 54, 54);
 }
 
 /* 상영관 세팅 구역 CSS 설정 */
@@ -73,6 +77,19 @@
     border: 1px solid rgb(54, 54, 54);
 }
 
+#seatingChart>div[data-status="empty"] {
+    background-color: white;
+}
+
+#seatingChart>div[data-status="pending"] {
+    background-color: #BDCDA3;
+}
+
+#seatingChart>div[data-status="reserved"] {
+    background-color: #9E3043;
+    color: white;
+}
+
 
 /* 결제/취소 관련 안내창 설정 */
 #orderDialog {
@@ -88,7 +105,26 @@
 
 #orderDialog>button {
     width: 30%;
-    cursor: pointer;
-    background-color: #F7E5B6;
+    height: 80px;
     border-radius: 7px;
+}
+
+#orderDialog>button[data-seat-picked="0"] {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#orderDialog>button[data-seat-picked="0"]:hover {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#orderDialog>button[data-seat-picked="1"] {
+    background-color: #ADDACC;
+    cursor: pointer;
+}
+
+#orderDialog>button[data-seat-picked="1"]:hover {
+    background-color: #56BAAE;
+    cursor: pointer;
 }

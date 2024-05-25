@@ -41,10 +41,10 @@
             </select>
         </div>
         <!-- 도움/진행 관련 안내창 -->
-        <div id="helpDialog">도움/진행 관련 안내창</div>
+        <div id="helpDialog">상영관을 선택하세요.</div>
         <!-- 선택한 상영관의 좌석도 출력 공간 -->
         <div id="seatingChart">
-            <div>1</div>
+            <!-- <div>1</div>
             <div>2</div>
             <div>3</div>
             <div>4</div>
@@ -63,12 +63,12 @@
             <div>17</div>
             <div>18</div>
             <div>19</div>
-            <div>20</div>
+            <div>20</div> -->
         </div>
         <!-- 결제 및 취소 관련 화면 -->
         <div id="orderDialog">
-            <div>선택좌석 asdfasd fasdfsadfsad fsadfsd</div>
-            <button>결제하기</button>
+            <div id="orderMsg">선택좌석: </div>
+            <button id="orderBtn" data-seat-picked="0" onclick="orderProcess()">예매하기</button>
         </div>
     </div>
 </body>
