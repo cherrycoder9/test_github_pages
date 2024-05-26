@@ -9,7 +9,7 @@
 /* 전체 레이아웃 */
 #wrapper {
     display: flex;
-    width: 700px;
+    width: 900px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -19,9 +19,10 @@
 
 /* 각 요소 간격 설정 */
 #wrapper>*,
-#wrapper>*>* {
-    margin: 3px 6px;
-    padding: 3px 6px;
+#wrapper>*>*,
+#wrapper>*>*>* {
+    margin: 4px 4px;
+    padding: 8px 8px;
     font-size: 18px;
 }
 
@@ -29,12 +30,12 @@
 #screenSetting,
 #seatingChart,
 #helpDialog,
-#orderDialog {
+#orderLayout {
     width: 70%;
 }
 
 #seatingChart,
-#orderDialog {
+#orderLayout {
     border-top: 1px solid rgb(54, 54, 54);
 }
 
@@ -68,7 +69,7 @@
 
 /* 각 좌석 표시방법 */
 #seatingChart>div {
-    width: 15%;
+    width: 17%;
     height: 50px;
     margin: 7px;
     text-align: center;
@@ -86,45 +87,55 @@
 }
 
 #seatingChart>div[data-status="reserved"] {
-    background-color: #9E3043;
+    background-color: #8C0A26;
+    color: white;
+}
+
+#seatingChart>div[data-status="precancel"] {
+    background-color: #E93F26;
     color: white;
 }
 
 
 /* 결제/취소 관련 안내창 설정 */
-#orderDialog {
+#orderLayout {
     display: flex;
     justify-content: space-between;
 }
 
-#orderDialog>div {
+#orderLayout>#detailMsg {
     width: 70%;
     word-wrap: break-word;
     cursor: default;
 }
 
-#orderDialog>button {
+#orderBtnWrapper {
+    display: flex;
     width: 30%;
-    height: 80px;
+    flex-direction: column;
+}
+
+#orderBtnWrapper>button {
+    height: 60px;
     border-radius: 7px;
 }
 
-#orderDialog>button[data-seat-picked="0"] {
+#orderLayout>button[data-seat-picked="0"] {
     background-color: grey;
     cursor: not-allowed;
 }
 
-#orderDialog>button[data-seat-picked="0"]:hover {
+#orderLayout>button[data-seat-picked="0"]:hover {
     background-color: grey;
     cursor: not-allowed;
 }
 
-#orderDialog>button[data-seat-picked="1"] {
+#orderLayout>button[data-seat-picked="1"] {
     background-color: #ADDACC;
     cursor: pointer;
 }
 
-#orderDialog>button[data-seat-picked="1"]:hover {
+#orderLayout>button[data-seat-picked="1"]:hover {
     background-color: #56BAAE;
     cursor: pointer;
 }
