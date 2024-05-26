@@ -29,45 +29,25 @@
 -->
 
 <body>
-  <!-- 전체 감싸서 세로 플렉스 처리 -->
+  <!-- 전체 감싸서 세로 flex 처리 -->
   <div id="wrapper">
     <!-- 상영관 세팅 -->
-    <div id="screenSetting">
-      <select id="screenChoice" onchange="screenChange()">
-        <!-- <option value="0">상영관 선택</option>
-                <option value="1">인천CGV 1관 (잔여좌석수: 20)</option>
-                <option value="2">인천CGV 2관 (잔여좌석수: 20)</option>
-                <option value="3">인천CGV 3관 (잔여좌석수: 20)</option> -->
+    <div id="screenChangeLayout">
+      <select id="screenSelectionList" onchange="changeScreen()">
+        <option value="0">상영관 선택</option>
+        <option id="screen1" value="1" data-discount="0"></option>
+        <option id="screen2" value="2" data-discount="0"></option>
+        <option id="screen3" value="3" data-discount="0"></option>
       </select>
     </div>
     <!-- 도움/진행 관련 안내창 -->
-    <div id="helpDialog">상영관을 선택하세요.</div>
+    <div id="helpDialogBox">상영관을 선택하세요.</div>
     <!-- 선택한 상영관의 좌석도 출력 공간 -->
-    <div id="seatingChart">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
-      <div>11</div>
-      <div>12</div>
-      <div>13</div>
-      <div>14</div>
-      <div>15</div>
-      <div>16</div>
-      <div>17</div>
-      <div>18</div>
-      <div>19</div>
-      <div>20</div>
+    <div id="seatingStatusBox">
     </div>
     <!-- 결제 및 취소 관련 화면 -->
     <div id="orderLayout">
-      <div id="detailMsg">선택좌석: </div>
+      <div id="detailMsgBox"></div>
       <div id="orderBtnWrapper">
         <button id="reservationBtn" data-btn-activate="0" onclick="reserveSeat()">예매하기</button>
         <button id="cancelBtn" data-btn-activate="0" onclick="cancelSeat()">취소하기</button>

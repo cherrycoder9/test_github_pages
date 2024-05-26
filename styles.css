@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* CSS 속성 초기화 */
 * {
     padding: 0;
@@ -23,36 +30,37 @@
 #wrapper>*>*>* {
     margin: 4px 4px;
     padding: 8px 8px;
-    font-size: 18px;
+    font-family: 'Pretendard-Regular';
+    font-size: 17px;
 }
 
 /* 래퍼 하위요소 너비설정 */
-#screenSetting,
-#seatingChart,
-#helpDialog,
+#screenChangeLayout,
+#seatingStatusBox,
+#helpDialogBox,
 #orderLayout {
     width: 70%;
 }
 
-#seatingChart,
+#seatingStatusBox,
 #orderLayout {
     border-top: 1px solid rgb(54, 54, 54);
 }
 
 /* 상영관 세팅 구역 CSS 설정 */
-#screenSetting {
+#screenChangeLayout {
     display: flex;
     justify-content: space-between;
     height: 70px;
 }
 
-#screenSetting>select {
+#screenChangeLayout>select {
     width: 100%;
     text-align: center;
 }
 
 /* 도움/진행 관련 안내창 설정 */
-#helpDialog {
+#helpDialogBox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,16 +69,16 @@
 }
 
 /* 좌석도 표시방법 */
-#seatingChart {
+#seatingStatusBox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 /* 각 좌석 표시방법 */
-#seatingChart>div {
+#seatingStatusBox>div {
     width: 17%;
-    height: 50px;
+    height: 60px;
     margin: 7px;
     text-align: center;
     align-content: center;
@@ -78,22 +86,24 @@
     border: 1px solid rgb(54, 54, 54);
 }
 
-#seatingChart>div[data-status="empty"] {
+#seatingStatusBox>div[data-status="able"] {
     background-color: white;
+    color: black;
 }
 
-#seatingChart>div[data-status="pending"] {
-    background-color: #BDCDA3;
+#seatingStatusBox>div[data-status="pend"] {
+    background-color: #F1D0AC;
+    color: black;
 }
 
-#seatingChart>div[data-status="reserved"] {
-    background-color: #8C0A26;
+#seatingStatusBox>div[data-status="rsrv"] {
+    background-color: #EB505B;
     color: white;
 }
 
-#seatingChart>div[data-status="precancel"] {
-    background-color: #E93F26;
-    color: white;
+#seatingStatusBox>div[data-status="canc"] {
+    background-color: #90B69E;
+    color: black;
 }
 
 
@@ -103,7 +113,7 @@
     justify-content: space-between;
 }
 
-#orderLayout>#detailMsg {
+#orderLayout>#detailMsgBox {
     width: 70%;
     word-wrap: break-word;
     cursor: default;
@@ -117,25 +127,27 @@
 
 #orderBtnWrapper>button {
     height: 60px;
-    border-radius: 7px;
+    border-radius: 15px;
+    border: 0;
 }
 
-#orderLayout>button[data-seat-picked="0"] {
+#orderBtnWrapper>button[data-btn-activate="0"] {
     background-color: grey;
     cursor: not-allowed;
 }
 
-#orderLayout>button[data-seat-picked="0"]:hover {
+#orderBtnWrapper>button[data-btn-activate="0"]:hover {
     background-color: grey;
     cursor: not-allowed;
 }
 
-#orderLayout>button[data-seat-picked="1"] {
-    background-color: #ADDACC;
+#orderBtnWrapper>button[data-btn-activate="1"] {
+    background-color: #C1E5C8;
     cursor: pointer;
 }
 
-#orderLayout>button[data-seat-picked="1"]:hover {
-    background-color: #56BAAE;
+#orderBtnWrapper>button[data-btn-activate="1"]:hover {
+    background-color: #8BC3C0;
     cursor: pointer;
+    border: 1px solid black;
 }
