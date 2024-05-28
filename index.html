@@ -6,8 +6,8 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Page Title</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-  <script src='styles.css' defer></script>
+  <link rel='stylesheet' type='text/css' media='screen' href='2_과제.css'>
+  <script src='2_과제.js' defer></script>
 </head>
 
 <!-- 
@@ -28,19 +28,21 @@
 
 <body>
   <div id="wrap">
-    <div id="category">
-      <div id="coffee">커피</div>
-      <div id="tea">티</div>
-      <div id="ade">에이드</div>
+    <div id="category" onclick="categoryPrint()">
+      <div id="1" onclick="">커피</div>
+      <div id="2">티</div>
+      <div id="3">에이드</div>
     </div>
     <div id="productList">
-      <div id="product1">연유라떼</div>
-      <div id="product2">자몽에이드</div>
-      <div id="product3">에스프레소</div>
+      <div id="product1"></div>
+      <div id="product2"></div>
+      <div id="product3"></div>
     </div>
     <div id="cart">
-      <div id="cartList">고른상품 담기는곳</div>
-      <div id="purchase">구매하기</div>
+      <div id="cartList">
+
+      </div>
+      <div onclick="buy()" id="purchase">구매하기 버튼</div>
     </div>
   </div>
 </body>
