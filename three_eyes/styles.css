@@ -44,6 +44,19 @@ body {
 }
 
 .infoMsg {
+    display: flex;
+    height: 200px;
+    flex-direction: column;
     grid-area: j;
     cursor: default;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
 }
