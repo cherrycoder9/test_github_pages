@@ -20,8 +20,7 @@ body {
         'j j j'
 }
 
-.tttCell,
-.infoMsg {
+.tttBoard>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +32,15 @@ body {
 
 .tttCell {
     cursor: pointer;
+}
+
+.tttCell[data-color="P"] {
+    background-color: #66A0D2;
+}
+
+.tttCell[data-color="C"] {
+    background-color: #DE4D4A;
+    cursor: not-allowed;
 }
 
 .infoMsg {
